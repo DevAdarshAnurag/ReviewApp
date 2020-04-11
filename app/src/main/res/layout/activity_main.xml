@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back_64dp" />
+
+    <ImageView
+        android:id="@+id/iv_home"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_home_black_64dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_back"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_title"
+        android:layout_alignBottom="@id/tv_title"
+        android:layout_marginStart="16sp"
+        android:layout_toEndOf="@id/tv_title"
+        android:gravity="center"
+        android:text="(30 character limit)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_alignStart="@id/tv_title"
+        android:layout_alignEnd="@id/tv_title_limit"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_edit_text"
+        android:hint="An interesting title"
+        android:maxLength="30"
+        android:padding="8dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_title"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Review"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_review_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_review"
+        android:layout_alignBottom="@id/tv_review"
+        android:layout_marginStart="16sp"
+        android:layout_toEndOf="@id/tv_review"
+        android:gravity="center"
+        android:text="(200 character limit)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_hashtag"
+        android:layout_below="@id/tv_review"
+        android:layout_alignStart="@id/tv_review"
+        android:layout_alignEnd="@id/tv_review_limit"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_edit_text"
+        android:gravity="start"
+        android:hint="I thought..."
+        android:maxLength="200"
+        android:padding="8dp"
+        android:textSize="20sp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@color/black"
+        app:srcCompat="@drawable/ic_add_white_24dp" />
+
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et_author"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Author"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_author"
+        android:layout_alignEnd="@id/tv_title_limit"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/border_edit_text"
+        android:gravity="start"
+        android:hint="Anonymous"
+        android:padding="8dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_hashtag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et_hashtag"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Hashtag"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_hashtag_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_hashtag"
+        android:layout_alignBottom="@id/tv_hashtag"
+        android:layout_marginStart="16sp"
+        android:layout_toEndOf="@id/tv_hashtag"
+        android:gravity="center"
+        android:text="(Up to 5)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_hashtag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_author"
+        android:layout_alignStart="@id/tv_title"
+        android:layout_alignEnd="@id/tv_title_limit"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_edit_text"
+        android:gravity="start"
+        android:hint="#"
+        android:maxLength="200"
+        android:padding="8dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>
