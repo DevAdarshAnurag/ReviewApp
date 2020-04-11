@@ -178,4 +178,16 @@
         android:padding="8dp"
         android:textSize="20sp" />
 
+    <ImageView
+        android:id="@+id/iv_add_hashtag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/et_hashtag"
+        android:layout_alignBottom="@id/et_hashtag"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/et_hashtag"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_add_white_24dp"
+        android:tint="@color/black" />
+
 </RelativeLayout>
